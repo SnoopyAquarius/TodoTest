@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="6dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="6dp"
+    android:orientation="vertical"
+    tools:context="example.snoopyaquarius.todotest.activity.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/l1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/todo_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="在此处输入待做事件"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/todo_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="添加"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/todo_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:id="@+id/l2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <CheckBox
+            android:id="@+id/todo_all_complete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全选"/>
+
+        <TextView
+            android:id="@+id/todo_completed"
+            android:layout_marginLeft="6dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="已完成0 / 全部0 " />
+
+        <Button
+            android:id="@+id/todo_clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="清除已完成的事件"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+</LinearLayout>
